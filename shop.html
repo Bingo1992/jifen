@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>保险超市</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<header>
+		<img src="img/logo.jpg">
+	</header>
+	<div class="service clearfix">
+		<div class="service_1"><h2>爱我家财</h2></div>
+		<div class="service_2"><h2>意外保障</h2></div>
+		<div class="service_3"><h2>随车行李</h2></div>
+		<div class="service_4"><h2>其他保险</h2></div>
+	</div>
+
+	<ul class="type_order clearfix">
+		<li class="active">按产品热度</li>
+		<li>按保障范围</li>
+		<li>按最新上架</li>
+	</ul>
+
+	<ul class="detail_list clearfix">
+		<li>
+			<a href="detail.html" class="list_0">
+				<p>险种名称：</p>
+				<p>保障方案：</p>
+				<p>购买数量：</p>
+				<p>一键投保：</p>
+			</a>
+		</li>
+		<li>
+			<a href="detail.html" class="list_0">
+				<p>险种名称：</p>
+				<p>保障方案：</p>
+				<p>购买数量：</p>
+				<p>一键投保：</p>
+			</a>
+		</li>
+		<li>
+			<a href="detail.html" class="list_0">
+				<p>险种名称：</p>
+				<p>保障方案：</p>
+				<p>购买数量：</p>
+				<p>一键投保：</p>
+			</a>
+		</li>
+	</ul>
+
+	<nav class="bottom_nav">
+		<ul>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="index.html">我的首页</a></li>
+			<li><a href="order_list.html">我的订单</a></li>
+			<li><a href="acitvity.html">我的活动</a></li>
+		</ul>
+	</nav>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+	    $('.type_order li').click(function(){      
+	         $(this).addClass('active').siblings().removeClass('active');
+	    });
+	});
+	</script>
+</body>
+</html>

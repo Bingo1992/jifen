@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>我的卡券</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="body ticket">
+	<div class="header">
+		<p><img src="img/logo_c.png"></p>
+		<h2>我的卡券</h2>
+		<p><a href="#">使用说明</a></p>
+	</div>
+	
+	<div class="tabs clearfix">
+		<a class="tic_active" href="#">我的兑换</a>
+		<a href="#">我的赠券</a>
+	</div>
+	<div class="tabShow">
+		<div class="tab-content">
+			<ul>
+				<li>
+					<dl>
+						<dt>这是电子券名称</dt>
+						<dd>兑换码：000-1111-222</dd>
+						<dd>有效期至：2015/6/30</dd>
+						<dd class="con-other">
+							<a href="">二维码</a>
+							<a href="shop.html">到门店去</a>
+						</dd>
+					</dl>
+					
+				</li>
+			</ul>
+		</div>
+		<div class="tab-content">
+			<ul>
+				<li>
+					<dl>
+						<dt>这是电子券名称</dt>
+						<dd>兑换码：000-1111-222</dd>
+						<dd>有效期至：2015/6/30</dd>
+						<dd class="con-other">
+							<a href="">二维码</a>
+							<a href="shop.html">到门店去</a>
+						</dd>
+					</dl>
+					
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="tabShow" style="display: none">
+		<div class="tab-content">
+			<ul>
+				<li>
+					<dl>
+						<dt>这是名称</dt>
+						<dd>兑换码：000-1111-222</dd>
+						<dd>有效期至：2015/6/30</dd>
+						<dd class="con-other">
+							<a href="">二维码</a>
+							<a href="shop.html">到门店去</a>
+						</dd>
+					</dl>
+					
+				</li>
+			</ul>
+		</div>
+		<div class="tab-content">
+			<ul>
+				<li>
+					<dl>
+						<dt>这是名称</dt>
+						<dd>兑换码：000-1111-222</dd>
+						<dd>有效期至：2015/6/30</dd>
+						<dd class="con-other">
+							<a href="">二维码</a>
+							<a href="shop.html">到门店去</a>
+						</dd>
+					</dl>
+					
+				</li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$('.tabs a').click(function(){
+			$(this).addClass('tic_active').siblings().removeClass('tic_active');
+			var index = $('.tabs a').index(this);
+			$('.tabShow').eq(index).css("display","block").siblings('.tabShow').css("display","none");
+		})
+	})
+	</script>
+</body>
+</html>

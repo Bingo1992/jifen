@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>PICC</title>
+	<link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+	<div class="bg">
+		<img src="img/picc_bg.jpg">		
+	</div>
+
+	<!-- 图片轮播 -->
+	<div id="banner-left">
+        <div id="banner-wrap">
+            <a href=""><img src="img/ban1.jpg">
+            </a>
+            <a href=""><img src="img/ban2.jpg">
+            </a>
+            <a href=""><img src="img/ban3.jpg">
+            </a>
+        </div>
+        <ul id="banner-point">
+            <li class="points"></li>
+            <li class="points"></li>
+            <li class="points"></li>
+        </ul>
+    </div><!-- banner-left -->
+
+    <div class="text-right">
+    	<h2>“广州人保”</h2>
+    	<h1>积分商城</h1>
+    	
+    </div>
+
+	<div class="cloud cloud1">
+		<a href="detail.html">
+			<img src="img/Cloud.png">
+			<p>汽车服务</p>
+		</a>
+	</div>
+	<div class="cloud cloud2">
+		<a href="#">
+			<img src="img/Cloud.png">
+			<p>保险超市</p>
+		</a>
+	</div>
+	<div class="cloud cloud3">
+		<a href="#">
+			<img src="img/Cloud.png">
+			<p>推荐给我</p>
+		</a>
+	</div>
+	<div class="cloud cloud4">
+		<a href="#">
+			<img src="img/Cloud.png">
+			<p>生活惊喜</p>
+		</a>
+	</div>
+	<div class="cloud cloud5">
+		<a href="#">
+			<img src="img/Cloud.png">
+			<p>缤纷活动</p>
+		</a>
+	</div>
+	<div class="cloud cloud6">
+		<a href="#">
+			<img src="img/Cloud.png">
+			<p>兑换排行</p>
+		</a>
+	</div>
+
+	<div class="tag">
+		<p><strong>我的昵称：</strong>黄生</p>
+		<p><strong>我的等级：</strong>V9</p>
+		<p><strong>我的积分：</strong>29000</p>
+	</div>
+
+	<nav class="bottom_nav">
+		<ul class="nav_0">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">我的首页</a></li>
+			<li><a href="#">我的订单</a></li>
+			<li><a href="#">我的活动</a></li>
+		</ul>
+	</nav>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript">
+		 $(function() {
+		     var banner = $("#banner-left");
+		     var imgs = $("#banner-left a");
+		     var len = imgs.length;
+		     var index = 0;
+		     var adTimer;
+		     $(".points").mouseover(function() {
+		         index = $(".points").index(this);
+		         showImg(index);
+		     }).eq(0).mouseover();
+		     // 滑入停止播放幻灯片，滑出循环播放
+		     banner.hover(function() {
+		         clearInterval(adTimer);
+		     }, function() {
+		         adTimer = setInterval(function() {
+		             showImg(index);
+		             index++;
+		             if (index == len) {
+		                 index = 0;
+		             }
+		         }, 3000);
+		     }).trigger("mouseleave");
+		 })
+		 // 显示不同幻灯片
+		 function showImg(index) {
+		     var adwidth = $("#banner-left").width();
+		     $("#banner-wrap").stop(true, false).animate({
+		         left: -adwidth * index
+		     }, 1000);
+		     $(".points").removeClass('cupoint')
+		         .eq(index).addClass('cupoint');
+		 }
+	</script>
+</body>
+</html>
